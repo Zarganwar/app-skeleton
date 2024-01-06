@@ -18,7 +18,6 @@ final class GetNewUuidCommandHandler implements CommandHandler
 
 	public function handle(Command|GetNewUuidCommand $command): UuidInterface
 	{
-		throw new \Exception('Oh no!');
 		return $this->factory->uuid4();
 	}
 
