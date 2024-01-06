@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+use App\Infrastructure\Application;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$application = new Application();
+$app = $application->getApp();
+$container = $app->getContainer();
+
+$app->run();
+

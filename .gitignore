@@ -1,0 +1,7 @@
+# Project
+.idea
+
+# Application
+docker-compose.override.yml
+config/local.php
+/vendor/

@@ -1,0 +1,28 @@
+parameters:
+	level: 9
+	paths:
+		- src
+
+	scanDirectories:
+		- src
+		- tests
+
+	tmpDir: var/cache/phpstan
+
+	excludePaths:
+		- */tests/tmp/*
+
+	fileExtensions:
+		- php
+		- phpt
+
+
+	# Not strong for this now
+	checkMissingIterableValueType: false # � Consider adding something like array<Foo> to the PHPDoc.
+	checkGenericClassInNonGenericObjectType: false
+
+	parallel:
+	    processTimeout: 300.0
+
+php:
+	memoryLimit: -1
