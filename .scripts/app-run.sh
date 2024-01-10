@@ -9,7 +9,7 @@ cp docker-compose.override.example.yml docker-compose.override.yml || true
 export UID && docker-compose up -d --build
 
 # Install composer dependencies
-docker-compose exec app composer update
+docker-compose exec app composer install
 
 # Copy config/local.example.php to config/local.php if it doesn't exist
 cp config/local.example.php config/local.php || true
