@@ -30,18 +30,6 @@ final class Application
 	}
 
 
-	public function getApp(): App
-	{
-		return $this->app;
-	}
-
-
-	public function run(): void
-	{
-		$this->app->run();
-	}
-
-
 	private function createContainer(): ContainerInterface
 	{
 		$containerBuilder = new ContainerBuilder();
@@ -51,8 +39,8 @@ final class Application
 			$containerBuilder->enableCompilation(__DIR__ . '/../../var/cache');
 		}
 
-		$containerBuilder->addDefinitions(__DIR__ . '/../../config/common.php');
-		$containerBuilder->addDefinitions(__DIR__ . '/../../config/local.php');
+		$containerBuilder->addDefinitions(__DIR__ . '/../../app/config/common.php');
+		$containerBuilder->addDefinitions(__DIR__ . '/../../app/config/local.php');
 
 		return $containerBuilder->build();
 	}
@@ -66,6 +54,18 @@ final class Application
 		$this->app->get('/uuid', UuidController::class)
 			->add(LoggerMiddleware::class)
 		;
+	}
+
+
+	public function getApp(): App
+	{
+		return $this->app;
+	}
+
+
+	public function run(): void
+	{
+		$this->app->run();
 	}
 
 }

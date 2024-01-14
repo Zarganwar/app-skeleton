@@ -25,7 +25,7 @@ services:
       - --explicit_defaults_for_timestamp
     healthcheck:
       # Healthcheck overall time ~2h
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-ppass"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-ppass" ]
       start_period: 15s
       interval: 30s
       retries: 240

@@ -3,5 +3,5 @@
 
 # Application
 etc/dev/docker-compose.override.yml
-config/local.php
+app/config/local.php
 /vendor/

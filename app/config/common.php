@@ -12,7 +12,7 @@ use Ramsey\Uuid\UuidFactoryInterface;
 use Slim\Psr7\Factory\ResponseFactory;
 
 return [
-	LoggerInterface::class => fn(ContainerInterface $container) => new FileLogger(__DIR__ . '/../var/log'),
+	LoggerInterface::class => fn(ContainerInterface $container) => new FileLogger(__DIR__ . '/../../var/log'),
 	ResponseFactoryInterface::class => fn(ContainerInterface $container) => $container->get(ResponseFactory::class),
 	CommandBus::class => function (ContainerInterface $container): CommandBus
 	{
