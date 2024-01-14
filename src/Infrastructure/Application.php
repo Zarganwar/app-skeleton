@@ -4,10 +4,10 @@
 namespace App\Infrastructure;
 
 
-use App\Infrastructure\Ui\Http\Handlers\HomepageHandler;
-use App\Infrastructure\Ui\Http\Handlers\UuidHandler;
-use App\Infrastructure\Ui\Http\Middlewares\CorsMiddleware;
-use App\Infrastructure\Ui\Http\Middlewares\LoggerMiddleware;
+use App\UI\Http\Controllers\HomepageController;
+use App\UI\Http\Controllers\UuidController;
+use App\UI\Http\Middlewares\CorsMiddleware;
+use App\UI\Http\Middlewares\LoggerMiddleware;
 use DI\ContainerBuilder;
 use Psr\Container\ContainerInterface;
 use Slim\App;
@@ -62,8 +62,8 @@ final class Application
 	{
 		$this->app->add(CorsMiddleware::class);
 
-		$this->app->get('/', HomepageHandler::class);
-		$this->app->get('/uuid', UuidHandler::class)
+		$this->app->get('/', HomepageController::class);
+		$this->app->get('/uuid', UuidController::class)
 			->add(LoggerMiddleware::class)
 		;
 	}

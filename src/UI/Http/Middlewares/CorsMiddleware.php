@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Infrastructure\Ui\Http\Middlewares;
+namespace App\UI\Http\Middlewares;
 
 
 use Psr\Http\Message\ResponseInterface;

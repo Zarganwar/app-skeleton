@@ -2,6 +2,6 @@
 .idea
 
 # Application
-docker-compose.override.yml
+etc/dev/docker-compose.override.yml
 config/local.php
 /vendor/

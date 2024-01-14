@@ -4,13 +4,12 @@
 namespace App\Application\Command\Uuid;
 
 
-use Ramsey\Uuid\Uuid;
+use App\Application\CommandHandler;
 use Ramsey\Uuid\UuidFactoryInterface;
 use Ramsey\Uuid\UuidInterface;
 use Zarganwar\CommandBus\Command;
-use Zarganwar\CommandBus\CommandHandler;
 
-final class GetNewUuidCommandHandler implements CommandHandler
+final class GetNewUuidCommandHandler extends CommandHandler
 {
 
 	public function __construct(private readonly UuidFactoryInterface $factory) {}

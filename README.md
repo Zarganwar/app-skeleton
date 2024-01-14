@@ -2,7 +2,7 @@
 
 1. Run application
 ```bash
-cd .scripts && ./app-run.sh
+cd ./etc/dev && ./app-run.sh
 ```
 
 2. Links
